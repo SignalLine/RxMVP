@@ -1,0 +1,107 @@
+package com.single.rxmvp.utils;
+
+import android.util.Log;
+
+/**
+ * @author li
+ *         Create on 2018/1/10.
+ * @Description
+ *              日志工具类
+ */
+
+public class LogUtils {
+
+    private static final String TAG = "RxMVP";
+    private static boolean allowD = true;
+    private static boolean allowE = true;
+    private static boolean allowI = true;
+    private static boolean allowV = true;
+    private static boolean allowW = true;
+
+    private LogUtils() {
+    }
+
+    /**
+     * 开启Log
+     *
+     * @author ZhongDaFeng
+     */
+    public static void openLog(boolean flag) {
+        allowD = flag;
+        allowE = flag;
+        allowI = flag;
+        allowV = flag;
+        allowW = flag;
+    }
+
+    public static void d(String content) {
+        if (!allowD){
+            return;
+        }
+        Log.d(TAG, content);
+    }
+
+    public static void e(String content) {
+        if (!allowE) {
+            return;
+        }
+        Log.e(TAG, content);
+    }
+
+    public static void i(String content) {
+        if (!allowI) {
+            return;
+        }
+        Log.i(TAG, content);
+    }
+
+    public static void v(String content) {
+        if (!allowV) {
+            return;
+        }
+        Log.v(TAG, content);
+    }
+
+    public static void w(String content) {
+        if (!allowW) {
+            return;
+        }
+        Log.w(TAG, content);
+    }
+
+    public static void d(String tag,String content) {
+        if (!allowD){
+            return;
+        }
+        Log.d(tag, content);
+    }
+
+    public static void e(String tag,String content) {
+        if (!allowE) {
+            return;
+        }
+        Log.e(tag, content);
+    }
+
+    public static void i(String tag,String content) {
+        if (!allowI) {
+            return;
+        }
+        Log.i(tag, content);
+    }
+
+    public static void v(String tag,String content) {
+        if (!allowV) {
+            return;
+        }
+        Log.v(tag, content);
+    }
+
+    public static void w(String tag,String content) {
+        if (!allowW) {
+            return;
+        }
+        Log.w(tag, content);
+    }
+
+}
